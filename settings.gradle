@@ -1,0 +1,3 @@
+rootProject.name = "LibraryPlayground"
+include ':app'
+include ':library'
