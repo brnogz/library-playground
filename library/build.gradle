@@ -45,11 +45,11 @@ project.afterEvaluate {
     publishing {
         publications{
             release(MavenPublication) {
-                from components.release
                 groupId = 'com.github.brnogz'
                 artifactId = 'library-playground'
-                version = '1.0.2'
+                version = '1.0.3'
 
+                artifact bundleReleaseAar
                 pom.withXml {
                     def dependenciesNode = asNode().appendNode('dependencies')
                     configurations.compile.allDependencies.each {
